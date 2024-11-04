@@ -1,0 +1,13 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nome:</label>
+    <input id="name" formControlName="name" required>
+  
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" required>
+  
+    <label for="message">Mensagem:</label>
+    <textarea id="message" formControlName="message" required></textarea>
+  
+    <button type="submit" [disabled]="feedbackForm.invalid">Enviar</button>
+  </form>
+  
